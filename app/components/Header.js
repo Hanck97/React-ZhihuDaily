@@ -23,7 +23,7 @@ class Header extends Component {
 
                 <div className='center-content'><span>{title}</span></div>
 
-                <div className='right-content'></div>
+                <div className='right-content'>知乎日报</div>
 
             </div>
         )
