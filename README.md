@@ -1,14 +1,14 @@
 # 用React仿知乎日报 Webapp
 
 
-##笔记
-####actions
+## 笔记
+#### actions
 
-####components
+#### components
 
-####config
+#### config
 
-####containers
+#### containers
 Component组件生命周期
     * Mounting：已插入真实 DOM
     * Updating：正在被重新渲染
@@ -27,7 +27,7 @@ Component组件生命周期
      *  this.context.router.push('/') ，注：这个写法会把跳转载入浏览器历史，若不想留下历史记录则可以 this.context.router.replace('/') 
 带有动画效果的路由切换(摘要: ReactCSSTransitionGroup)
      * 当我们需要在路由切换时带有一定的动画效果时，我们便需react-addons-css-transition-group 这个插件了。使用ReactCSSTransitionGroup组件来包含我们需要呈现动画效果的view
-####helpers
+#### helpers
 
 
-####reducers
+#### reducers
