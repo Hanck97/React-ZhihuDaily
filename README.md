@@ -33,9 +33,9 @@ Component组件生命周期
 
 props用法
     1、PropTypes
-       组件类的PropTypes属性，就是用来验证组件实例的属性是否符合要求。
+    * 组件类的PropTypes属性，就是用来验证组件实例的属性是否符合要求。
     2、默认 Prop 值 getDefaultProps
-       当父级没有传入 props 时，getDefaultProps() 可以保证 this.props.value 有默认值，注意 getDefaultProps 的结果会被 缓存。得益于此，你可以直接使用 props，而不必手动编写一些重复或无意义的代码。
+    * 当父级没有传入 props 时，getDefaultProps() 可以保证 this.props.value 有默认值，注意 getDefaultProps 的结果会被 缓存。得益于此，你可以直接使用 props，而不必手动编写一些重复或无意义的代码。
 #### helpers
 
 
