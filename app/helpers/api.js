@@ -1,7 +1,3 @@
-/*
- * @Author: Hancock 
- * @Date: 2017-11-28 15:07:12 
-*/
 import axios from 'axios';
 
 export function getLatestStoryApi() {

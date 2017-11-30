@@ -1,7 +1,3 @@
-/*
- * @Author: Hancock 
- * @Date: 2017-11-28 15:08:38 
-*/
 import {
     getLatestStoryApi,
     getDetailApi,
@@ -10,72 +6,75 @@ import {
     getThemeContentApi,
 } from '../helpers/api';
 
-
-//获得最近的文章列表
-
-export const getLatestDate = () =>{
-    return(dispatch,getStore) => {
-        if(getStore().mainList.length > 0){
+/**
+ * 获得最近的文章列表 
+ */
+export const getLatestData = () => {
+    return (dispatch, getStore) => {
+        if (getStore().mainList.length > 0) {
             return;
         }
 
         getLatestStoryApi().then(res => {
             dispatch(getLatest(res));
-        })
-
-    }
-
-};
+        });
+    };
+}
 
 export const getLatest = (res) => {
     return {
-        type:'GET_LATESET',
+        type: 'GET_LATEST',
         payload: res.data
     }
-};
-/*-------------------------------------------*/
-//获得一个具体日期的文章列表
-
-export const getBeforeData = (date) =>{
-    return (dispatch,getStore) => {
-        getBeforeStoryApi(date).then(res => {
-            dispatch(getBefore(res,date));
-        })
-    }
-};
-
-export const getBefore = (res, date) => {
-        return {
-            type:'GET_BEFORE',
-            payload:{
-                data:res.data,
-                date
-            }
-        }
-
 }
 /*-------------------------------------------*/
 
-//获取一篇文章的具体内容
+/**
+ * 获得一个具体日期的文章列表
+ */
+export const getBeforeData = (date) => {
+    return (dispatch, getStore) => {
+        getBeforeStoryApi(date).then(res => {
+            dispatch(getBefore(res, date));
+        });
+    };
+}
 
+export const getBefore = (res, date) => {
+    return {
+        type: 'GET_BEFORE',
+        payload: {
+            data: res.data,
+            date
+        }
+    }
+}
+/*--------------------------------------------*/
+
+
+/**
+ * 获取一篇文章的具体内容
+ */
 export const getDetailData = (id) => {
     return (dispatch => {
         getDetailApi(id).then(res => {
             dispatch(getDetail(res));
-        })
-    })
-};
+        });
+    });
+}
 
 export const getDetail = (res) => {
     return {
-        type:'GET_DETAIL',
-        payload:res.data
+        type: 'GET_DETAIL',
+        payload: res.data
     }
-};
+}
 /*---------------------------------------------*/
 
-//获取主题列表
 
+/**
+ * 获取日报的主题列表 
+ */
 export const getThemesData = () => {
     return (dispatch => {
         getThemesApi().then(res => {
@@ -92,7 +91,9 @@ export const getThemes = (res) => {
 }
 /*---------------------------------------------*/
 
-//获得选定主题下的文章列表
+/**
+ * 获取一个主题下的文章列表
+ */
 export const getThemeContentData = (id) => {
     return (dispatch => {
         getThemeContentApi(id).then(res => {
@@ -110,7 +111,7 @@ export const getThemeContent = (res, id) => {
         }
     }
 }
-/*---------------------------------------------*/
+
 
 // 记录主页当前的垂直位置
 export const setScrollTop = (data) => {

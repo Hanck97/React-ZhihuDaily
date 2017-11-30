@@ -1,7 +1,3 @@
-/*
- * @Author: Hancock 
- * @Date: 2017-11-28 15:06:45 
-*/
 var axios = require('axios');
 
 // 获取最新的文章列表

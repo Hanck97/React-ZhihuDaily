@@ -23,7 +23,6 @@ Component组件生命周期
     * componentWillUpdate：组件接收到新的props或者state但还没有render时被执行
     * componentDidUpdate :在组件完成更新后立即执行
 
-     ![](https://github.com/KeKe-Li/react/blob/master/src/assets/images/prop.png)
 
 函数内路由跳转
 
@@ -31,6 +30,12 @@ Component组件生命周期
 带有动画效果的路由切换(摘要: ReactCSSTransitionGroup)
 
      * 当我们需要在路由切换时带有一定的动画效果时，我们便需react-addons-css-transition-group 这个插件了。使用ReactCSSTransitionGroup组件来包含我们需要呈现动画效果的view
+
+props用法
+    1、PropTypes
+       组件类的PropTypes属性，就是用来验证组件实例的属性是否符合要求。
+    2、默认 Prop 值 getDefaultProps
+       当父级没有传入 props 时，getDefaultProps() 可以保证 this.props.value 有默认值，注意 getDefaultProps 的结果会被 缓存。得益于此，你可以直接使用 props，而不必手动编写一些重复或无意义的代码。
 #### helpers
 
 
